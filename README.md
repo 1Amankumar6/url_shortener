@@ -1,24 +1,25 @@
-```markdown
 # URL Shortener
 
-A full-stack *URL shortening application* built with *Spring Boot* (backend) and *React.js* (frontend), with optional *Docker support* for deployment. The project allows users to shorten long URLs, track clicks, and manage their links efficiently with authentication.
+A full-stack **URL shortening application** built with **Spring Boot** (backend) and **React.js** (frontend), with optional **Docker support** for deployment. Users can shorten long URLs, track clicks, and manage their links efficiently with authentication.
 
 ---
 
 ## Tech Stack
-- *Backend:* Java, Spring Boot, REST APIs, JWT Authentication  
-- *Frontend:* React.js, HTML, CSS, JavaScript  
-- *Database:* MySQL  
-- *Containerization:* Docker  
+
+- **Backend:** Java, Spring Boot, REST APIs, JWT Authentication  
+- **Frontend:** React.js, HTML, CSS, JavaScript  
+- **Database:** MySQL  
+- **Containerization:** Docker (optional)  
 
 ---
 
 ## Features
-- User registration and authentication (JWT-based)  
+
+- User registration and JWT-based authentication  
 - Shorten long URLs into easy-to-share links  
 - Redirect from short URL to original URL  
 - View all URLs created by a user  
-- Track clicks on URLs with analytics and date filtering  
+- Track clicks with analytics and date filtering  
 - RESTful API endpoints for CRUD operations  
 - Dockerized backend for easy deployment  
 - Integrated frontend for seamless user experience  
@@ -28,49 +29,53 @@ A full-stack *URL shortening application* built with *Spring Boot* (backend) and
 ## Backend API Endpoints
 
 ### Authentication
-| Method | Endpoint                  | Description               |
-|--------|--------------------------|---------------------------|
-| POST   | `/api/auth/public/login`   | Login user               |
-| POST   | `/api/auth/public/register`| Register user            |
+
+| Method | Endpoint                    | Description       |
+| ------ | --------------------------- | ---------------- |
+| POST   | `/api/auth/public/login`    | Login user       |
+| POST   | `/api/auth/public/register` | Register user    |
 
 ### URL Management
-| Method | Endpoint                          | Description                                 |
-|--------|----------------------------------|--------------------------------------------|
-| POST   | `/api/urls/shorten`               | Create a short URL (Authenticated User)   |
-| GET    | `/api/urls/myurls`                | Get all URLs created by user              |
-| GET    | `/api/urls/analytics/{shortUrl}` | Get click analytics for a URL             |
-| GET    | `/api/urls/totalClicks`           | Get total clicks per day for a user       |
-| GET    | `/{shortUrl}`                     | Redirect to the original URL             |
+
+| Method | Endpoint                         | Description                             |
+| ------ | -------------------------------- | --------------------------------------- |
+| POST   | `/api/urls/shorten`              | Create a short URL (authenticated)      |
+| GET    | `/api/urls/myurls`               | Get all URLs created by the user        |
+| GET    | `/api/urls/analytics/{shortUrl}` | Get click analytics for a URL           |
+| GET    | `/api/urls/totalClicks`          | Get total clicks per day for a user     |
+| GET    | `/{shortUrl}`                    | Redirect to the original URL            |
 
 ---
 
 ## Frontend
 
-- Built with *React.js*, integrated with the backend APIs.  
-- Provides forms for *login*, *registration*, and *URL shortening*.  
-- Dashboard shows *all shortened URLs*, *click statistics*, and *analytics by date*.  
-- Communicates with backend using *REST APIs* secured via JWT.  
+- Built with **React.js**, fully integrated with backend APIs  
+- Forms for **login**, **registration**, and **URL shortening**  
+- Dashboard displaying **all shortened URLs**, **click statistics**, and **analytics by date**  
+- Communicates with backend via **JWT-secured REST APIs**  
 
 ---
 
 ## Installation
 
 ### Prerequisites
+
 - Java 17+  
 - Node.js & npm  
-- MySQL database  
+- MySQL  
 - Docker (optional)  
 
 ### Backend Setup
+
 ```bash
 cd backend
 mvn clean package
 java -jar target/url-shortener.jar
-
-# Or using Docker
+```
+### Docker
 docker build -t url-shortener-backend .
 docker run -p 8080:8080 url-shortener-backend
-```
+
 
 ### Frontend Setup
 
@@ -80,8 +85,8 @@ npm install
 npm start
 ```
 
-* Runs frontend at: `http://localhost:3000`
-* Make sure backend is running at `http://localhost:8080`
+- Runs frontend at: `http://localhost:3000`
+- Make sure backend is running at `http://localhost:8080`
 
 ---
 
@@ -97,14 +102,14 @@ npm start
 
 ## Docker Deployment (Optional)
 
-* Build and run backend container:
+- Build and run backend container:
 
 ```bash
 docker build -t url-shortener-backend .
 docker run -p 8080:8080 url-shortener-backend
 ```
 
-* Frontend can be served separately using `npm start` or integrated into Docker with a custom Dockerfile.
+- Frontend can be served separately using `npm start` or integrated into Docker with a custom Dockerfile.
 
 ---
 
@@ -125,6 +130,3 @@ This project is licensed under the MIT License.
 ---
 
 **Note:** Backend and frontend are fully integrated. Docker setup is optional but recommended for consistency across environments.
-
-```
-
