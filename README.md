@@ -1,15 +1,15 @@
-````markdown
+```markdown
 # URL Shortener
 
-A full-stack **URL shortening application** built with **Spring Boot** (backend) and **React.js** (frontend), with optional **Docker support** for deployment. The project allows users to shorten long URLs, track clicks, and manage their links efficiently with authentication.
+A full-stack *URL shortening application* built with *Spring Boot* (backend) and *React.js* (frontend), with optional *Docker support* for deployment. The project allows users to shorten long URLs, track clicks, and manage their links efficiently with authentication.
 
 ---
 
 ## Tech Stack
-- **Backend:** Java, Spring Boot, REST APIs, JWT Authentication  
-- **Frontend:** React.js, HTML, CSS, JavaScript  
-- **Database:** MySQL  
-- **Containerization:** Docker  
+- *Backend:* Java, Spring Boot, REST APIs, JWT Authentication  
+- *Frontend:* React.js, HTML, CSS, JavaScript  
+- *Database:* MySQL  
+- *Containerization:* Docker  
 
 ---
 
@@ -46,10 +46,10 @@ A full-stack **URL shortening application** built with **Spring Boot** (backend)
 
 ## Frontend
 
-- Built with **React.js**, integrated with the backend APIs.  
-- Provides forms for **login**, **registration**, and **URL shortening**.  
-- Dashboard shows **all shortened URLs**, **click statistics**, and **analytics by date**.  
-- Communicates with backend using **REST APIs** secured via JWT.  
+- Built with *React.js*, integrated with the backend APIs.  
+- Provides forms for *login*, *registration*, and *URL shortening*.  
+- Dashboard shows *all shortened URLs*, *click statistics*, and *analytics by date*.  
+- Communicates with backend using *REST APIs* secured via JWT.  
 
 ---
 
@@ -70,7 +70,7 @@ java -jar target/url-shortener.jar
 # Or using Docker
 docker build -t url-shortener-backend .
 docker run -p 8080:8080 url-shortener-backend
-````
+```
 
 ### Frontend Setup
 
